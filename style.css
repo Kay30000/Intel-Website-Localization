@@ -35,6 +35,79 @@ header {
   margin-top: 0;
 }
 
+.timeline-carousel {
+  position: relative;
+  padding-inline: 3.25rem;
+}
+
+.timeline-carousel-inner {
+  padding: 0.25rem 0;
+}
+
+.timeline-slide {
+  margin: 0;
+}
+
+.timeline-slide > [class*="col"] {
+  display: flex;
+}
+
+.timeline-slide > [class*="col"] > .cards {
+  width: 100%;
+}
+
+.timeline-indicators {
+  position: static;
+  margin: 1.25rem 0 0;
+  justify-content: center;
+  gap: 0.5rem;
+  direction: rtl;
+}
+
+.timeline-indicators [data-bs-target] {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  background-color: #0b3a66;
+}
+
+.timeline-control {
+  position: absolute;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.9;
+  transform: translateY(-50%);
+  background: rgba(11, 58, 102, 0.85);
+  border-radius: 999px;
+}
+
+.timeline-control.carousel-control-prev {
+  left: auto;
+  right: -0.25rem;
+}
+
+.timeline-control.carousel-control-next {
+  left: -0.25rem;
+  right: auto;
+}
+
+.timeline-control .carousel-control-prev-icon,
+.timeline-control .carousel-control-next-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.timeline-control.carousel-control-prev .carousel-control-prev-icon,
+.timeline-control.carousel-control-next .carousel-control-next-icon {
+  transform: none;
+}
+
+.timeline-control:hover,
+.timeline-control:focus {
+  opacity: 1;
+}
+
 .cards {
   transition: 0.3s;
   box-sizing: border-box;
@@ -225,6 +298,21 @@ header {
     padding: 14px 16px;
   }
 
+  .timeline-carousel {
+    position: static;
+    padding-inline: 2rem;
+  }
+
+  .timeline-control.carousel-control-prev {
+    left: auto;
+    right: -0.5rem;
+  }
+
+  .timeline-control.carousel-control-next {
+    left: -0.5rem;
+    right: auto;
+  }
+
   .hero h1 {
     font-size: 1.35rem;
   }
@@ -245,6 +333,29 @@ header {
 
   .hero-desc {
     font-size: 0.95rem;
+  }
+
+  .timeline-carousel {
+    padding-inline: 0;
+  }
+
+  .timeline-control {
+    top: 0.5rem;
+    transform: none;
+  }
+
+  .timeline-control.carousel-control-prev {
+    left: auto;
+    right: 0;
+  }
+
+  .timeline-control.carousel-control-next {
+    left: 0;
+    right: auto;
+  }
+
+  .timeline-indicators {
+    margin-top: 1rem;
   }
 
   .cards {
