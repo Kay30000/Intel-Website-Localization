@@ -61,7 +61,7 @@ header {
   margin: 1.25rem 0 0;
   justify-content: center;
   gap: 0.5rem;
-  direction: rtl;
+  direction: inherit;
 }
 
 .timeline-indicators [data-bs-target] {
@@ -83,13 +83,21 @@ header {
 }
 
 .timeline-control.carousel-control-prev {
-  left: auto;
-  right: -0.25rem;
+  /* fallback for older browsers (LTR placement) */
+  left: -0.25rem;
+  right: auto;
+  /* logical properties: start/end will flip automatically in RTL */
+  inset-inline-start: -0.25rem;
+  inset-inline-end: auto;
 }
 
 .timeline-control.carousel-control-next {
-  left: -0.25rem;
-  right: auto;
+  /* fallback for older browsers (LTR placement) */
+  left: auto;
+  right: -0.25rem;
+  /* logical properties: start/end will flip automatically in RTL */
+  inset-inline-start: auto;
+  inset-inline-end: -0.25rem;
 }
 
 .timeline-control .carousel-control-prev-icon,
@@ -304,13 +312,17 @@ header {
   }
 
   .timeline-control.carousel-control-prev {
-    left: auto;
-    right: -0.5rem;
+    left: -0.5rem;
+    right: auto;
+    inset-inline-start: -0.5rem;
+    inset-inline-end: auto;
   }
 
   .timeline-control.carousel-control-next {
-    left: -0.5rem;
-    right: auto;
+    left: auto;
+    right: -0.5rem;
+    inset-inline-start: auto;
+    inset-inline-end: -0.5rem;
   }
 
   .hero h1 {
@@ -345,13 +357,17 @@ header {
   }
 
   .timeline-control.carousel-control-prev {
-    left: auto;
-    right: 0;
+    left: 0;
+    right: auto;
+    inset-inline-start: 0;
+    inset-inline-end: auto;
   }
 
   .timeline-control.carousel-control-next {
-    left: 0;
-    right: auto;
+    left: auto;
+    right: 0;
+    inset-inline-start: auto;
+    inset-inline-end: 0;
   }
 
   .timeline-indicators {
