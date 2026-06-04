@@ -7,6 +7,16 @@ header {
   background: linear-gradient(334deg, #079df8, #0b3a66);
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 .hero {
   align-items: center;
 }
@@ -301,6 +311,36 @@ header {
   border-color: #046aa8;
 }
 
+.site-footer {
+  margin-top: auto;
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid rgba(7, 157, 248, 0.18);
+  background: linear-gradient(135deg, rgba(11, 58, 102, 0.96), rgba(7, 157, 248, 0.9));
+  color: #fff;
+}
+
+.site-footer-copy {
+  font-family: "M PLUS 1", sans-serif;
+  font-size: 0.95rem;
+}
+
+.site-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.site-footer-nav a:hover,
+.site-footer-nav a:focus {
+  text-decoration: underline;
+}
+
 @media (max-width: 900px) {
   header {
     padding: 14px 16px;
@@ -394,5 +434,9 @@ header {
 
   .subscription-card {
     padding: 20px;
+  }
+
+  .site-footer {
+    padding: 1rem 1.25rem;
   }
 }
