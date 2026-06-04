@@ -1,22 +1,14 @@
 /* Add your CSS here */
 
-/* Header layout: heading left, logo right, sticky at top */
 header {
-  position: sticky;
-  top: 0;
-  background: #fff;
   z-index: 10;
   padding: 16px 20px;
   border-bottom: 1px solid #eee;
-  background: linear-gradient(334deg, #079df8, transparent);
+  background: linear-gradient(334deg, #079df8, #0b3a66);
 }
 
 .hero {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
 }
 
 .hero h1 {
@@ -24,6 +16,7 @@ header {
   font-size: 1.5rem;
   font-family: "M PLUS 1", sans-serif;
   line-height: 1.2;
+  color: #fff;
 }
 
 .intel-logo {
@@ -34,55 +27,27 @@ header {
 
 .hero-desc {
   margin: 8px 0 0 0;
-  color: #333;
+  color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
 .timeline {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 16px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.timeline::-webkit-scrollbar {
-  height: 10px;
-}
-
-.timeline::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.15);
-  border-radius: 8px;
+  margin-top: 0;
 }
 
 .cards {
   transition: 0.3s;
-  flex: 0 0 280px;
-  width: 280px;
-  min-width: 220px;
-  max-width: 320px;
   box-sizing: border-box;
-  border-radius: 5px;
-  padding: 12px;
+  border-radius: 8px;
+  padding: 16px;
   background: #fff;
-  scroll-snap-align: start;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .cards h2,
 .cards h3 {
   margin: 0;
   font-family: "Lato", sans-serif;
-}
-
-.cards img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-  margin: 12px 0;
-  border-radius: 4px;
 }
 
 .card-media {
@@ -111,7 +76,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: left;
+  text-align: start;
   color: #fff;
   background: rgba(0, 0, 0, 0.45);
   opacity: 0;
@@ -135,6 +100,126 @@ header {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+.intel-highlights {
+  padding-bottom: 0;
+}
+
+.highlight-card {
+  padding: 24px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #079df8, #0b3a66);
+}
+
+.highlight-icon-inner {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "M PLUS 1", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+}
+
+.highlight-chip {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.highlight-leaf {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.highlight-globe {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.highlight-card h3 {
+  margin: 0 0 12px;
+  font-family: "Lato", sans-serif;
+}
+
+.highlight-card p {
+  margin: 0 0 20px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.highlight-card .btn-primary {
+  background-color: #079df8;
+  border-color: #079df8;
+}
+
+.highlight-card .btn-primary:hover,
+.highlight-card .btn-primary:focus {
+  background-color: #0579bf;
+  border-color: #0579bf;
+}
+
+.subscription-section {
+  padding-top: 0;
+}
+
+.subscription-card {
+  padding: 28px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(7, 157, 248, 0.12), rgba(255, 255, 255, 0.95));
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.subscription-card h3 {
+  margin: 0 0 12px;
+  font-family: "Lato", sans-serif;
+}
+
+.subscription-card p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.subscription-form .form-label {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subscription-form .input-group {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.subscription-form .form-control {
+  min-height: 48px;
+  border-radius: 10px;
+}
+
+.subscription-form .btn-primary {
+  min-height: 48px;
+  padding-inline: 1.5rem;
+  border-radius: 10px;
+  background-color: #079df8;
+  border-color: #079df8;
+}
+
+.subscription-form .btn-primary:hover,
+.subscription-form .btn-primary:focus {
+  background-color: #046aa8;
+  border-color: #046aa8;
+}
+
 @media (max-width: 900px) {
   header {
     padding: 14px 16px;
@@ -142,11 +227,6 @@ header {
 
   .hero h1 {
     font-size: 1.35rem;
-  }
-
-  .cards {
-    flex-basis: 240px;
-    width: 240px;
   }
 }
 
@@ -157,14 +237,6 @@ header {
 
   .hero {
     align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .timeline {
-    flex-direction: column;
-    overflow-x: visible;
-    overflow-y: visible;
-    scroll-snap-type: none;
   }
 
   .intel-logo {
@@ -175,16 +247,8 @@ header {
     font-size: 0.95rem;
   }
 
-  .timeline {
-    padding: 12px;
-    gap: 12px;
-  }
-
   .cards {
-    flex: 1 1 auto;
     width: 100%;
-    min-width: 0;
-    max-width: none;
   }
 
   .card-media,
@@ -195,5 +259,13 @@ header {
   .card-media p {
     padding: 12px;
     font-size: 0.95rem;
+  }
+
+  .highlight-card {
+    padding: 20px;
+  }
+
+  .subscription-card {
+    padding: 20px;
   }
 }
